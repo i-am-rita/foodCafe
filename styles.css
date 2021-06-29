@@ -93,7 +93,7 @@ a {
   text-decoration: none;
 }
 
-img{
+img {
   width: 100%;
   /* height: 100vh; */
 }
@@ -220,7 +220,6 @@ i {
 
 /* Home */
 .home__img {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -240,14 +239,15 @@ i {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: var(--white-color);
+  color: black;
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: 0.3s;
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
+  /* background-color: var(--first-color-alt); */
+  color: gray;
 }
 
 .button--flex {
@@ -282,13 +282,23 @@ i {
 .showcard__container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  padding: 10px 120px 50px;
   padding-top: 50px;
 }
 
 .shadow__data {
-  padding: 30px 50px 10px 20px;
+  padding: 30px 50px 10px  20px;
   box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.75);
+
+  column-gap: 10px;
+
+}
+
+.shadow__data1 {
+  padding: 30px 50px 20px 20px;
+  box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.75);
+
+  column-gap: 10px;
+  
 }
 
 .showcard__container h2 {
@@ -301,6 +311,14 @@ i {
   font-size: var(--body-font);
   color: rgb(73, 70, 70);
   margin-bottom: 5px;
+}
+
+.showcard__img {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: end;
+
 }
 
 .view {
@@ -323,14 +341,11 @@ i {
 .home__info {
   background-color: var(--first-color);
   display: flex;
-  /* flex-direction: column; */
   padding: 30px 120px 10px 120px;
-  /* margin: -10px -20px ; */
-  /* padding: 1.5rem 1rem; */
+ 
   align-items: center;
   column-gap: 1.5rem;
-  /* position: absolute; */
-  /* right: 0; */
+ 
   bottom: 1rem;
   width: 100%;
 }
@@ -346,9 +361,7 @@ i {
   font-size: var(--smaller-font-size);
 }
 
-/* .home__info-overlay {
-  overflow: var(--img-hidden);
-} */
+
 
 .home__info-img {
   width: 200px;
@@ -358,8 +371,6 @@ i {
 .home__info-img:hover {
   transform: var(--img-scale);
 }
-
-
 
 hr {
   width: 100%;
@@ -382,14 +393,10 @@ span {
   text-align: center;
   align-items: center;
   padding: 35px;
-} 
-
+}
 
 .aboutus__container {
-  /* display: flex; */
-  /* grid-template-rows: repeat(3, 1fr); */
-  /* padding: 10px 120px 50px; */
-  /* padding: 30px 120px; */
+ 
   top: -0;
   height: 100vh;
 }
@@ -412,7 +419,6 @@ span {
 }
 
 .footer {
-  /* width: 100%; */
   background: rgb(65, 102, 65);
   color: #fff;
   /* bottom: 0px; */
@@ -420,18 +426,16 @@ span {
   text-align: center;
   align-items: center;
   padding: 35px;
-} 
+}
 
 /* Contact */
 .shade {
   box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.75);
   padding: 5px 19px 15px 30px;
-
 }
 .shadowed {
-  padding: 10px  20px;
+  padding: 10px 20px;
 }
-
 
 .horizontal {
   width: 100%;
@@ -464,13 +468,15 @@ input[type='submit']:hover {
   background-color: #45a049;
 }
 
-.bigbox{
+.bigbox {
   top: 0;
 }
 
- .realfood{
+.realfood {
   padding: 10px;
-  height: 400px;
+  height: 300px;
+  width: 100%;
+  background-size: fill;
 }
 
 ol {
@@ -486,16 +492,16 @@ ol {
   .shadow__data {
     padding: 30px 50px 10px 20px;
     box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.75);
+    
   }
 
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width: 768px) {
   body {
     margin: 0;
   }
   .home__img {
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -505,7 +511,6 @@ ol {
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
-
   }
   .nav__link {
     color: black;
@@ -514,12 +519,7 @@ ol {
     align-items: center;
     justify-content: space-between;
   }
-  /* .nav__link:hover {
-    color: var(--white-color);
-  } */
-  /* .nav__dark {
-    position: initial;
-  } */
+
   .nav__menu {
     display: flex;
     column-gap: 1rem;
@@ -529,12 +529,18 @@ ol {
     column-gap: 2rem;
   }
   .nav__toggle,
-  .nav__close{
+  .nav__close {
     display: none;
   }
+
+  .shadow__data1 {
+    padding: 30px 50px 20px 20px;
+    box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.75);
+    display: flex;
+  text-align: start;
+    column-gap: 10px;
+   
 }
-
-
 
 @media screen and (min-width: 1024px) {
   .container {
@@ -543,21 +549,20 @@ ol {
   }
 }
 
-
-@media screen and (min-width: 1200px){
-  body{
-    margin:0;
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 0;
   }
 
-  .container{
+  .container {
     max-width: 1024px;
   }
 }
 
 /* For tall screens on mobiles Y desktop */
-@media screen and (min-height: 721px){
-  body{
-    margin:0;
+@media screen and (min-height: 721px) {
+  body {
+    margin: 0;
   }
 
   .home__container,
@@ -565,4 +570,4 @@ ol {
     height: 640px;
   }
 }
-
+}
