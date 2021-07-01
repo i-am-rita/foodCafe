@@ -21,7 +21,11 @@
     />
     <title>Foodcafe-clone</title>
   </head>
-  <body>
+  <body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+    
+    <div style="display:none;" id="myDiv" class="animate-bottom">
     <header class="header" id="header">
       <nav class="container">
         <a href="/index.html" class="nav__logo">FoodCafe</a>
@@ -203,6 +207,7 @@
     <footer class="footer">
       <p>&#169; 2021 Foodcafe</p>
     </footer>
+  </div>
 
     <script src="script.js"></script>
   </body>
